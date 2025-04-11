@@ -24,7 +24,7 @@ describe("Application", () => {
     expect(pElement2).toBeInTheDocument();
 
     const pElement3 = screen.getByText((content) =>
-      content.endsWith("mandatory"),
+      content.endsWith("mandatory")
     );
     expect(pElement3).toBeInTheDocument();
 
@@ -66,6 +66,9 @@ describe("Application", () => {
 
     const submitBtnElement = screen.getByRole("button");
     expect(submitBtnElement).toBeInTheDocument();
+
+
+    
     expect(submitBtnElement).toBeDisabled();
   });
 });
