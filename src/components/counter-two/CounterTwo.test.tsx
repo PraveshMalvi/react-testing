@@ -18,17 +18,17 @@ describe("CounterTwo", () => {
         count={0}
         handleIncrement={incrementHandeler}
         handleDecrement={decrementHandeler}
-      />
+      />,
     );
     const incrementBtn = screen.getByRole("button", {
-        name: "Increment"
-    })
+      name: "Increment",
+    });
     const decrementBtn = screen.getByRole("button", {
-        name: "Decrement"
-    })
-    await userEvent.click(incrementBtn)
-    await userEvent.click(decrementBtn)
-    expect(incrementHandeler).toHaveBeenCalledTimes(1)
-    expect(decrementHandeler).toHaveBeenCalledTimes(1)
+      name: "Decrement",
+    });
+    await userEvent.click(incrementBtn);
+    await userEvent.click(decrementBtn);
+    expect(incrementHandeler).toHaveBeenCalledTimes(1);
+    expect(decrementHandeler).toHaveBeenCalledTimes(1);
   });
 });

@@ -33,13 +33,13 @@ describe("Skills", () => {
 
   test("start learning btn will render", async () => {
     const view = render(<Skills skills={skills} />);
-    logRoles(view.container)
+    logRoles(view.container);
     const startLearningBtn = await screen.findByRole(
       "button",
       {
         name: "Start Learning",
       },
-      { timeout: 2000 }
+      { timeout: 2000 },
     );
     expect(startLearningBtn).toBeInTheDocument();
   });
